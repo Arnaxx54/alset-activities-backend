@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "postinstall": "patch-package",
-    "heroku-postbuild": "patch-package"
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "mysql2": "^3.9.0",
     "nodemon": "^3.0.3",
