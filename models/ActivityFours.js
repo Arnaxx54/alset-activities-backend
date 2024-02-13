@@ -8,14 +8,16 @@ module.exports = (sequelize, DataTypes) => {
         UserId: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        label: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        instruction : {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
-
-    // ActivityFours.associate = (models) => {
-    //     ActivityFours.hasMany(models.ActivityFives, {
-    //         onDelete: "cascade" 
-    //     })
-    // }
 
     ActivityFours.associate = (models) => {
         ActivityFours.hasMany(models.Activities, {

@@ -12,14 +12,16 @@ module.exports = (sequelize, DataTypes) => {
         MLClusters: {
             type: DataTypes.BOOLEAN, 
             allowNull: true 
+        },
+        label: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        instruction : {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
-
-    // ActivityFives.associate = (models) => {
-    //     ActivityFives.hasMany(models.ActivitySixs, {
-    //         onDelete: "cascade" 
-    //     })
-    // }
 
     ActivityFives.associate = (models) => {
         ActivityFives.hasMany(models.Activities, {

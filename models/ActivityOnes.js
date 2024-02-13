@@ -16,7 +16,16 @@ module.exports = (sequelize, DataTypes) => {
         transcriptEditable: {
             type: DataTypes.BOOLEAN, 
             allowNull: true
+        },
+        label: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        instruction : {
+            type: DataTypes.STRING,
+            allowNull: true
         }
+
     })
 
     // ActivityOnes.associate = (models) => {

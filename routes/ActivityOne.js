@@ -16,7 +16,6 @@ router.post('/', async (req,res) => {
 
 router.post('/fromtemplate', async (req,res) => {
     const { id, content } = req.body;
-    console.log(content)
     const newActivityOne = await ActivityOnes.create(content);
     const newActivities = await Activities.create({UserId:id,ActivityOneId:newActivityOne.id})
     res.json({ActivitiesId: newActivities, ActivityOneId: newActivityOne.id});
@@ -31,8 +30,9 @@ router.get('/byId/:id', async (req,res) => {
 router.post('/byId/:id', async (req,res) => {
     const data = req.body;
     const id = req.params.id
+    console.log("sos")
     const updatedActivityOne = await ActivityOnes.update(
-        {activity_description:data.activity_description,content:data.content,transcript_source_id:data.transcript_source_id,transcriptEditable:data.transcriptEditable},
+        {activity_description:data.activity_description,content:data.content,transcript_source_id:data.transcript_source_id,transcriptEditable:data.transcriptEditable,label:data.label,instruction:data.instruction},
         {where: {id:id}}
     )
     res.json(updatedActivityOne)
@@ -46,6 +46,13 @@ router.post('/home/:id', async (req,res) => {
         {where: {id:id}}
     )
     res.json(updatedActivityOne)
+})
+
+router.post('/new-chain', async (req,res) => {
+    const { id, content } = req.body;
+    const newActivityOne = await ActivityOnes.create(content);
+    const newActivities = await Activities.create({UserId:id,ActivityOneId:newActivityOne.id})
+    res.json({ActivitiesId: newActivities, ActivityOneId: newActivityOne.id});
 })
 
 

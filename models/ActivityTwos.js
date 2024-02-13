@@ -20,6 +20,14 @@ module.exports = (sequelize, DataTypes) => {
         predefinedHighlighting: {
             type: DataTypes.BOOLEAN,
             allowNull: true
+        },
+        label: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        instruction : {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
 
