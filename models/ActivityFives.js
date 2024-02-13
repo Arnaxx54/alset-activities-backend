@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         },
         instruction : {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT('medium'),
             allowNull: true
         }
     })
