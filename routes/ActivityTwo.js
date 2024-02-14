@@ -24,7 +24,7 @@ router.post('/byId/:id', async (req, res) => {
     const data = req.body;
     const id = req.params.id
     const updatedActivityTwo = await ActivityTwos.update(
-        { activity_description: data.content.activity_description, content: data.content.content, transcript_source_id: data.content.transcript_source_id, predefinedHighlighting: data.content.predefinedHighlighting,label:data.label,instruction:data.instruction },
+        { activity_description: data.content.activity_description, content: data.content.content, transcript_source_id: data.content.transcript_source_id, predefinedHighlighting: data.content.predefinedHighlighting,label:data.content.label,instruction:data.content.instruction },
         { where: { id: id } }
     )
     res.json(updatedActivityTwo)
