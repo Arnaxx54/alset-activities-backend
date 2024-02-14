@@ -35,7 +35,7 @@ router.post('/home/:id', async (req,res) => {
     const data = req.body 
     const id = req.params.id
     const updatedActivityThree = await ActivityThrees.update(
-        {MLModel:data.MLModel,AllowMLModel:data.AllowMLModel,predefinedMLSelection:data.predefinedMLSelection},
+        {MLModel:data.MLModel,AllowMLModel:data.AllowMLModel,predefinedMLSelection:data.predefinedMLSelection,label:data.label,instruction:data.instruction},
         {where: {id:id}}
     )
     res.json(updatedActivityThree)

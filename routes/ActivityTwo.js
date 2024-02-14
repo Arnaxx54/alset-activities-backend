@@ -34,7 +34,7 @@ router.post('/home/:id', async (req,res) => {
     const data = req.body 
     const id = req.params.id
     const updatedActivityTwo = await ActivityTwos.update(
-        {predefinedHighlighting:data.predefinedHighlighting},
+        {predefinedHighlighting:data.predefinedHighlighting,label:data.label,instruction:data.instruction},
         {where: {id:id}}
     )
     res.json(updatedActivityTwo)

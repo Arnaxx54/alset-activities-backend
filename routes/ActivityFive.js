@@ -35,7 +35,7 @@ router.post('/home/:id', async (req,res) => {
     const data = req.body 
     const id = req.params.id
     const updatedActivityFive = await ActivityFives.update(
-        {MLClusters:data.MLClusters},
+        {MLClusters:data.MLClusters,label:data.label,instruction:data.instruction},
         {where: {id:id}}
     )
     res.json(updatedActivityFive)
