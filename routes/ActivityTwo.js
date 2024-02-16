@@ -41,9 +41,9 @@ router.post('/home/:id', async (req,res) => {
 })
 
 router.post('/new-chain', async (req,res) => {
-    const { content,UserId,ActivityOneId } = req.body;
+    const {id,content} = req.body;
     const newActivityTwo = await ActivityTwos.create(content);
-    const newActivities = await Activities.create({UserId:UserId,ActivityTwoId:newActivityTwo.id,ActivityOneId:ActivityOneId})
+    const newActivities = await Activities.create({UserId:content.UserId,ActivityTwoId:newActivityTwo.id})
     res.json({ActivitiesId: newActivities, ActivityTwoId: newActivityTwo.id});
 })
 

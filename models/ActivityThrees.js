@@ -1,19 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
 
     const ActivityThrees = sequelize.define("ActivityThrees", {
-        activity_description: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
         content: {
             type: DataTypes.JSON,
             allowNull: true,
         },
         transcript_source_id: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        UserId: {
             type: DataTypes.STRING,
             allowNull: true,
         },

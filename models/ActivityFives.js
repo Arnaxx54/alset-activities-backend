@@ -5,10 +5,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.JSON,
             allowNull: true,
         },
-        UserId: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         MLClusters: {
             type: DataTypes.BOOLEAN, 
             allowNull: true 

@@ -1,10 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
     const ActivityTwos = sequelize.define("ActivityTwos", {
-        activity_description: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
         content: {
             type: DataTypes.JSON,
             allowNull: true,
@@ -12,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
         transcript_source_id: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
-        UserId: {
-            type: DataTypes.STRING,
-            allowNull: true
         },
         predefinedHighlighting: {
             type: DataTypes.BOOLEAN,
