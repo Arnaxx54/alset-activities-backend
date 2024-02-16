@@ -43,6 +43,7 @@ router.post('/home/:id', async (req,res) => {
 router.post('/new-chain', async (req,res) => {
     const {id,content} = req.body;
     const newActivityTwo = await ActivityTwos.create(content);
+    console.log(newActivityTwo.UserId)
     const newActivities = await Activities.create({UserId:content.UserId,ActivityTwoId:newActivityTwo.id})
     res.json({ActivitiesId: newActivities, ActivityTwoId: newActivityTwo.id});
 })
