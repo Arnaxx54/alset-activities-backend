@@ -41,4 +41,11 @@ router.post('/home/:id', async (req,res) => {
     res.json(updatedActivityFive)
 })
 
+router.post('/new-chain', async (req,res) => {
+    const {id,content} = req.body;
+    const newActivityFive = await ActivityFives.create(content);
+    const newActivities = await Activities.create({UserId:content.UserId,ActivityFiveId:newActivityFive.id})
+    res.json({ActivitiesId: newActivities, ActivityFiveId: newActivityFive.id});
+})
+
 module.exports = router;
