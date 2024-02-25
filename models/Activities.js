@@ -9,8 +9,12 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     Activities.associate = (models) => {
-        Activities.hasMany(models.InstructorLogs)
-        Activities.hasMany(models.StudentLogs)
+        Activities.hasMany(models.InstructorLogs, {
+            foreignKey: 'ActivitySequenceId',
+        })
+        Activities.hasMany(models.StudentLogs, {
+            foreignKey: 'StudentTemplateId',
+        })
     }
 
 

@@ -6,9 +6,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         StudentEvent: {
             type: DataTypes.JSON,
+        },
+        tobeDeleted: {
+            type: DataTypes.STRING,
         }
-
-
     })
 
     return StudentLogs;
