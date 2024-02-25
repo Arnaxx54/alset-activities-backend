@@ -40,12 +40,12 @@ router.post('/home/:id', async (req,res) => {
     res.json(updatedActivityFour)
 })
 
-// router.post('/new-chain', async (req,res) => {
-//     const {id,content} = req.body;
-//     const newActivityFour = await ActivityFours.create(content);
-//     const newActivities = await Activities.create({UserId:content.UserId,ActivityFourId:newActivityFour.id})
-//     res.json({ActivitiesId: newActivities, ActivityFourId: newActivityFour.id});
-// })
+router.post('/new-chain', async (req,res) => {
+    const {id,content} = req.body;
+    const newActivityFour = await ActivityFours.create(content);
+    const newActivities = await Activities.create({UserId:content.UserId,ActivityFourId:newActivityFour.id})
+    res.json({ActivitiesId: newActivities, ActivityFourId: newActivityFour.id});
+})
 
 
 module.exports = router;
