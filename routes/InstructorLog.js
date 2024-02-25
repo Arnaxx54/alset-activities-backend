@@ -14,7 +14,7 @@ router.get('/get/byId/:id', async (req,res) => {
     res.json(instructorLogs)
 })
 
-router.get('/update/byId/:id', async (req,res) => {
+router.post('/update/byId/:id', async (req,res) => {
     const id = req.params.id
     const content = req.body
     const instructorLogs = await InstructorLogs.update(
