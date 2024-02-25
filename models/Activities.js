@@ -8,5 +8,12 @@ module.exports = (sequelize, DataTypes) => {
 
     })
 
+    Activities.associate = (models) => {
+        Activities.hasMany(models.InstructorLogs)
+        Activities.hasMany(models.StudentLogs)
+    }
+
+
+
     return Activities;
 }

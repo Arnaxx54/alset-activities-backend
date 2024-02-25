@@ -38,6 +38,16 @@ router.post('/byId/:id', async (req,res) => {
     res.json(updatedActivityOne)
 })
 
+router.post('/byId/:id/new-chain', async (req,res) => {
+    const id = req.params.id
+    const updatedActivities = await Activities.update(
+        {ActivityTwoId:null,ActivityThreeId:null,ActivityFourId:null,ActivityFiveId:null,ActivitySixId:null},
+        {where: {id:id}}
+    )
+    res.json(updatedActivities)
+})
+
+
 router.post('/home/:id', async (req,res) => {
     const data = req.body 
     const id = req.params.id

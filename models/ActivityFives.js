@@ -3,25 +3,23 @@ module.exports = (sequelize, DataTypes) => {
     const ActivityFives = sequelize.define("ActivityFives", {
         content: {
             type: DataTypes.JSON,
-            allowNull: true,
         },
         MLClusters: {
             type: DataTypes.BOOLEAN, 
-            allowNull: true 
         },
         label: {
             type: DataTypes.STRING,
-            allowNull: true
         },
         instruction : {
             type: DataTypes.TEXT('medium'),
-            allowNull: true
+        },
+        activity_mvc: {
+            type: DataTypes.JSON
         }
     })
 
     ActivityFives.associate = (models) => {
         ActivityFives.hasMany(models.Activities, {
-            onDelete: "cascade",
             foreignKey: 'ActivityFiveId',
         })
     }
