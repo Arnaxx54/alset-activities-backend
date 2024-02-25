@@ -64,20 +64,5 @@ router.post('/new-chain', async (req,res) => {
     res.json({ActivitiesId: newActivities, ActivityOneId: newActivityOne.id});
 })
 
-router.post('/student/logs/:id', async (req,res) => {
-    const id = req.params.id
-    const content = req.body
-    const newStudentLogs = await StudentLogs.create(content);
-    res.json({StudentLogsId: newStudentLogs.id})
-})
-
-router.post('/instructor/logs/:id', async (req,res) => {
-    const id = req.params.id
-    const content = req.body
-    const newInstructorLogs = await InstructorLogs.create(content);
-    res.json({InstructorLogs: newInstructorLogs.id})
-})
-
-
 
 module.exports = router;

@@ -24,6 +24,10 @@ const usersRouter = require('./routes/Users');
 app.use("/activityone/auth",usersRouter);
 const homeRouter = require('./routes/Home');
 app.use("/home",homeRouter);
+const studentLogsRouter = require('./routes/StudentLog');
+app.use("/studentlog",studentLogsRouter);
+const instructorLogsRouter = require('./routes/InstructorLog');
+app.use("/instructorlog",instructorLogsRouter);
 
 // db.sequelize.sync().then(() => {
 //     // app.listen(3001, () => {
