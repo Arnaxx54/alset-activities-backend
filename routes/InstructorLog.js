@@ -11,7 +11,7 @@ router.post('/create', async (req,res) => {
 router.get('/get/byId/:id', async (req,res) => {
     const id = req.params.id
     const instructorLogs = await InstructorLogs.findAll({where:{ActivitySequenceId:id}})
-    res.json(instructorLogs.StudentEvent)
+    res.json(instructorLogs)
 })
 
 module.exports = router;
