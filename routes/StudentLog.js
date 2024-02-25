@@ -14,4 +14,13 @@ router.get('/get/byId/:id', async (req,res) => {
     res.json(studentLogs)
 })
 
+router.get('/update/byId/:id', async (req,res) => {
+    const id = req.params.id
+    const content = req.body
+    const studentLogs = await StudentLogs.update(
+        {StudentEvent:content},
+        {where:{StudentTemplateId:id}})
+    res.json(studentLogs)
+})
+
 module.exports = router;
