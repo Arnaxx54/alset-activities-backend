@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
         },
         InstructorEvent: {
-            type: DataTypes.STRING,
+            type: DataTypes.JSON,
         }
     })
 
