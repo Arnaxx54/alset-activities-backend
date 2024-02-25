@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         StudentId: {
             type: DataTypes.STRING
         },
-        Event: {
+        StudentEvent: {
             Type: DataTypes.JSON
         }
 
