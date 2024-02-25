@@ -5,13 +5,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
         },
         InstructorId: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         InstructorEvent: {
-            Type: DataTypes.JSON
+            type: DataTypes.STRING,
         }
-
-
     })
 
     return InstructorLogs;
