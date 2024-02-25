@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {ActivityOnes,Activities} = require("../models");
-const StudentLogs = require("../models/StudentLogs");
-const InstructorLogs = require("../models/InstructorLogs");
-
+const {ActivityOnes,Activities,StudentLogs,InstructorLogs} = require("../models");
 router.get("/",async (req,res) => {
     const listOfActivityOnes =  await ActivityOnes.findAll();
     res.json(listOfActivityOnes);
