@@ -9,12 +9,6 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     Activities.associate = (models) => {
-        Activities.hasMany(models.InstructorLogs, {
-            foreignKey: 'ActivityId',
-        })
-        Activities.hasMany(models.StudentLogs, {
-            foreignKey: 'ActivityId',
-        })
         Activities.hasMany(models.SummariesA6s, {
             foreignKey: 'StudentTemplateId'
         })

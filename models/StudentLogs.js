@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         StudentTemplateId: {
             type: DataTypes.INTEGER
-        }
+        },
+        ActivityType: {
+            type: DataTypes.STRING,
+        },
+        ActivityId: {
+            type: DataTypes.INTEGER
+        },
     })
 
     return StudentLogs;

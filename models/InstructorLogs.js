@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
         ActivitySequenceId: {
             type: DataTypes.INTEGER,
         },
+        ActivityId: {
+            type: DataTypes.INTEGER,
+        },
+        ActivityType: {
+            type: DataTypes.STRING,
+        }
 
     })
 
