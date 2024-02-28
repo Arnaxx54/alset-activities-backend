@@ -4,8 +4,11 @@ module.exports = (sequelize, DataTypes) => {
         StudentId: {
             type: DataTypes.STRING,
         },
-        StudentEvent: {
-            type: DataTypes.JSON,
+        Event: {
+            type: DataTypes.STRING,
+        },
+        DateTime: {
+            type: DataTypes.DATE,
         },
     })
 

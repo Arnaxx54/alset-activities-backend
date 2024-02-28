@@ -13,20 +13,48 @@ module.exports = (sequelize, DataTypes) => {
         StudentTemplateId: {
             type: DataTypes.JSON,
         },
-        InstructorId: {
-            type: DataTypes.INTEGER,
+        InterviewerSentenceIndexA1: {
+          type: DataTypes.INTEGER  
         },
-        IntervieweeSentenceA1Index: {
+        InterviewerSentenceContentA1: {
+            type: DataTypes.TEXT('medium')
+        },
+        IntervieweeSentenceIndexA1: {
             type: DataTypes.INTEGER,
         },
         IntervieweeSentenceContentA1: {
-            type: DataTypes.JSON
+            type: DataTypes.TEXT('medium')
         },
         SentenceUserHighlightA2: {
-            type: DataTypes.JSON
+            type: DataTypes.BOOLEAN
+        },
+        SentenceUserHighlightA3: {
+            type: DataTypes.BOOLEAN
+        },
+        SentenceMLHighlightA3: {
+            type: DataTypes.BOOLEAN
+        },
+        UserClusterIndexA4: {
+            type: DataTypes.INTEGER
+        },
+        UserClusterLabelA4: {
+            type: DataTypes.STRING
+        },
+        UserClusterIndexA5: {
+            type: DataTypes.INTEGER,
+        },
+        InsightIndex: {
+            type: DataTypes.INTEGER,
+        },
+        InsightLabel: {
+            type: DataTypes.STRING,
+        },
+        NeedIndex: {
+            type: DataTypes.INTEGER,
+        },
+        NeedLabel: {
+            type: DataTypes.STRING,
         }
-
-
     })
 
     return Summaries;
