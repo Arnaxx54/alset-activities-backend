@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
         DateTime: {
             type: DataTypes.DATE,
         },
+        ActivitySequenceId: {
+            type: DataTypes.INTEGER,
+        },
+
     })
 
     return InstructorLogs;

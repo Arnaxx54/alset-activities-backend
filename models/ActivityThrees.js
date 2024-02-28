@@ -22,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
         instruction : {
             type: DataTypes.TEXT('medium'),
         },
-        // activity_mvc: {
-        //     type: DataTypes.JSON
-        // }
+        activity_mvc: {
+            type: DataTypes.JSON
+        }
     })
 
     ActivityThrees.associate = (models) => {
