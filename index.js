@@ -28,8 +28,8 @@ const studentLogsRouter = require('./routes/StudentLog');
 app.use("/studentlog",studentLogsRouter);
 const instructorLogsRouter = require('./routes/InstructorLog');
 app.use("/instructorlog",instructorLogsRouter);
-// const summaryRouter = require('./routes/Summary');
-// app.use("/summary",summaryRouter);
+const summaryRouter = require('./routes/Summary');
+app.use("/summary",summaryRouter);
 
 // db.sequelize.sync().then(() => {
 //     // app.listen(3001, () => {
