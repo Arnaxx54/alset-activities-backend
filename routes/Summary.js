@@ -7,3 +7,5 @@ router.post('/create', async (req,res) => {
     const newSummaries = await Summaries.create(content);
     res.json({SummariesId: newSummaries.id})
 })
+
+module.exports = router;
